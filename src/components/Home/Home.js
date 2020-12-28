@@ -16,6 +16,11 @@ const Home = () => {
       time: new Date("12/22/2020"),
       content: 'The first challenge will be starting on December 28th, 2020! If you are looking to participate, please make sure you <s>sign</s> up before December 24th!'
     },
+    {
+      title: "Challenge #1 - Holiday Havoc is now live!",
+      time: new Date("12/28/2020"),
+      content: "The first UW Code Force challenge is officially live! Please check your email if you have signed up! You can also find the challenge PDF on the challenges page! Good luck, have fun!"
+    },
     // {
     //   title: "Another news item",
     //   time: new Date("01/16/2020"),
