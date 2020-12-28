@@ -7,7 +7,7 @@ import { CodeForceTitleSection } from './../Miscellaneous/Miscellaneous.componen
 const CONTACT_URL = "https://uwcodeforce.ca:3004/contact";
 
 // If teams want names, modify it here.
-const TEAMS = Array.from({length: 7}, (v, i) => i+1);
+const TEAMS = Array.from({length: 8}, (v, i) => i+1);
 
 
 const Contact = () => {
