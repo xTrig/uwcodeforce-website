@@ -81,14 +81,16 @@ const Contact = () => {
                         </div>
                         <div className="mb-3">
                             <label htmlFor="team" className="form-label"><strong>Team</strong></label> 
-                            {TEAMS.map((elem, idx) => (
+                            {/* {TEAMS.map((elem, idx) => (
                                 <div class="form-check">
                                     <input required class="form-check-input" type="radio" name="team" id={`form-team-${idx}`} value={elem}/>
                                     <label class="form-check-label" for={`form-team-${idx}`}>
                                         Team {elem}
                                     </label>
                                 </div>
-                            ))}
+                            ))} */}
+
+                            <input type="number" name="team" className="form-control" placeholder="If you are currently part of a team, enter the team number" value={formState.team} onChange={(e) => {handleChange(e, "team")}}></input>
                         </div>
                         <div className="mb-3">
                             <label htmlFor="message" className="form-label" ><strong>Message</strong></label>
