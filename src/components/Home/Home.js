@@ -36,7 +36,7 @@ const Home = () => {
   // Maybe make a server call for new updates. But that for later.
 
   return (
-    <div className="container-fluid p-0 fullscreen intro">
+    <div className="container-fluid fullscreen intro">
       <CodeForceTitleSection/>
       <div className="row">
         <div className="col-sm-9 col-centered mt-4">
