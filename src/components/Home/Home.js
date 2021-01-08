@@ -1,4 +1,5 @@
-import React, { memo, useState } from 'react'
+import { fireEvent } from '@testing-library/react';
+import React, { memo, useState, useEffect } from 'react'
 import {
   CodeForceTitleSection,
   NewsItem
@@ -8,30 +9,31 @@ import {
 
 const Home = () => {
 
-  //TODO: Get news items from the server.
   
   const [newsItems, setNewsItems] = useState([
-    {
-      title: "First challenge starts Dec. 28, 2020",
-      time: new Date("12/22/2020"),
-      content: 'The first challenge will be starting on December 28th, 2020! If you are looking to participate, please make sure you <s>sign</s> up before December 24th!'
-    },
-    {
-      title: "Challenge #1 - Holiday Havoc is now live!",
-      time: new Date("12/28/2020"),
-      content: "The first UW Code Force challenge is officially live! Please check your email if you have signed up! You can also find the challenge PDF on the challenges page! Good luck, have fun!"
-    },
     // {
-    //   title: "Another news item",
-    //   time: new Date("01/16/2020"),
-    //   content: 'Some content goes here...' 
+    //   title: "First challenge starts Dec. 28, 2020",
+    //   time: new Date("12/22/2020"),
+    //   content: 'The first challenge will be starting on December 28th, 2020! If you are looking to participate, please make sure you <s>sign</s> up before December 24th!'
     // },
     // {
-    //   title: "Yet another news item",
-    //   time: new Date("12/24/2020"),
-    //   content: 'Some content goes here too...' 
-    // }
+    //   title: "Challenge #1 - Holiday Havoc is now live!",
+    //   time: new Date("12/28/2020"),
+    //   content: "The first UW Code Force challenge is officially live! Please check your email if you have signed up! You can also find the challenge PDF on the challenges page! Good luck, have fun!"
+    // },
   ]);
+
+
+  //Fetch data from server
+  useEffect(async () => {
+    let res = await(await(fetch("https://uwcodeforce.ca/api/news"))).json();
+    if(res) {
+      for(let i = 0; i < res.length; i++) { //Convert times to Date()
+        res[i].time = new Date(res[i].time);
+      }
+      setNewsItems(res);
+    }
+  })
 
   // Maybe make a server call for new updates. But that for later.
 
