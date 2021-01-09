@@ -25,7 +25,11 @@ const Home = () => {
 
 
   //Fetch data from server
-  useEffect(async () => {
+  useEffect(() => {
+    fetchNewsPosts();
+  }, []);
+
+  const fetchNewsPosts = async () => {
     let res = await(await(fetch("https://uwcodeforce.ca/api/news"))).json();
     if(res) {
       for(let i = 0; i < res.length; i++) { //Convert times to Date()
@@ -33,7 +37,7 @@ const Home = () => {
       }
       setNewsItems(res);
     }
-  })
+  }
 
   // Maybe make a server call for new updates. But that for later.
 
