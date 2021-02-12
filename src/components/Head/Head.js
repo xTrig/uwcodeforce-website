@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import { Logo } from './../Miscellaneous/Miscellaneous.component';
 
 
-const Head = () => {
+const Head = ({signedIn, setSignedIn}) => {
+  setSignedIn(document.cookie ? true : false);
   return (
     <nav className="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
@@ -23,7 +24,7 @@ const Head = () => {
           className="collapse navbar-collapse"
           id="navbarNavAltMarkup"
         >
-          <div className="navbar-nav p-2">
+          <div className="navbar-nav mr-auto p-2">
             <Link className="nav-link dark-hover text-light" to="/"> Home</Link>
             <Link className="nav-link dark-hover text-light" to="/challenges">Challenges</Link>
             <Link className="nav-link dark-hover text-light" to="/contact"> Contact </Link>
@@ -35,7 +36,13 @@ const Head = () => {
             >Sign Up
             </a>
           </div>
+          
         </div>
+        <div className="nav ml-auto">
+            {!signedIn ? 
+            <a className="nav-link dark-hover text-light" href="https://uwcodeforce.ca/api/auth" rel="noreferrer">Login</a>
+            : <a className="nav-link dark-hover text-light" href="https://uwcodeforce.ca/api/auth/logout" rel="noreferrer">Logout</a>}
+          </div>
       </div>
     </nav>
   )
