@@ -3,7 +3,7 @@ import { CodeForceTitleSection } from './../Miscellaneous/Miscellaneous.componen
 import { Challenge } from './Challenge.component'
 
 
-const Challenges = () => {
+const Challenges = ({signedIn}) => {
 
     // Maybe get challenges from server. But that is for later.
     // TODO: get challenge data from server.
