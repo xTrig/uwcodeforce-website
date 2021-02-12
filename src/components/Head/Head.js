@@ -4,7 +4,7 @@ import { Logo } from './../Miscellaneous/Miscellaneous.component';
 
 
 const Head = ({signedIn, setSignedIn}) => {
-  setSignedIn(document.cookie ? true : false);
+  setSignedIn(document.cookie ? true : false); //Temporary, just to check if server sent OAUTH response
   return (
     <nav className="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
