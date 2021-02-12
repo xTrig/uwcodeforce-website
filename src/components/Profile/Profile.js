@@ -10,30 +10,35 @@ const Profile = () => {
         alertType: "success"
     });
 
+    const [profile, setProfile] = useState();
+
     useEffect(() => {
         fetchProfileData();
     }, []);
 
     const fetchProfileData = async () => {
-        let res = await fetch("https://uwcodeforce.ca/api/myprofile", {
+        fetch("https://uwcodeforce.ca/api/myprofile", {
             method: 'GET',
             credentials: 'include'
-        });
+        }).then((res) => res.json().then((data) => {
+            if(data.status === "success") {
+                setAlertObj({
+                    showAlert: true,
+                    alertMsg: "Profile fetched successfully",
+                    alertType: "success"
+                });
+                setProfile(data.profile);
+            } else {
+                setAlertObj({
+                    showAlert: true,
+                    alertMsg: "Failed to load profile",
+                    alertType: "error"
+                });
+                setProfile(null);
+            }
+        }));
 
-        if(res.status === "success") {
-            setAlertObj({
-                showAlert: true,
-                alertMsg: "Profile fetched successfully",
-                alertType: "success"
-            });
-            console.log(res);
-        } else {
-            setAlertObj({
-                showAlert: true,
-                alertMsg: "Failed to load profile",
-                alertType: "error"
-            });
-        }
+        
     }
     return(
         <div className="container-fluid fullscreen intro">
@@ -43,6 +48,11 @@ const Profile = () => {
             </div>
             <div className="row col-sm-8 col-centered">
                 <h2>Profile will go here</h2>
+                {profile ? <div>
+                    <h3>First Name: {profile?.firstName}</h3>
+                <h3>Last Name: {profile?.lastName}</h3>
+                </div> : ""}
+                
             </div>
         </div>
     )
