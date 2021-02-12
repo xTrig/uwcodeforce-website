@@ -16,9 +16,9 @@ const Footer = () => {
                         </div>
                         <div className="col-md-4 col-sm-6 col-xs-12">
                         <ul className="social-icons">
-                            <li><a className="github" href="https://www.github.com/aalekhpatel07"><i class="fa fa-github"></i></a></li>
-                            <li><a className="twitter" href="https://www.twitter.com/AalekhPatel4"><i class="fa fa-twitter"></i></a></li>
-                            <li><a className="linkedin" href="https://www.linkedin.com/in/aalekhpatel07"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a className="github" href="https://www.github.com/aalekhpatel07"><i className="fa fa-github"></i></a></li>
+                            <li><a className="twitter" href="https://www.twitter.com/AalekhPatel4"><i className="fa fa-twitter"></i></a></li>
+                            <li><a className="linkedin" href="https://www.linkedin.com/in/aalekhpatel07"><i className="fa fa-linkedin"></i></a></li>
                         </ul>
                         </div>
                     </div>
