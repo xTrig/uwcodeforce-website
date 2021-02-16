@@ -39,7 +39,10 @@ const Profile = () => {
                 setFormState({...formState,
                     firstName: data.profile.firstName,
                     lastName: data.profile.lastName,
-                    email: data.profile.googleEmail
+                    email: data.profile.contactEmail || data.profile.googleEmail,
+                    yearOfStudy: data.profile.yearOfStudy,
+                    discord: data.profile.discord,
+                    nameConsent: data.profile.nameConsent
                 });
             } else {
                 setAlertObject({
@@ -108,6 +111,10 @@ const Profile = () => {
                             <div className="mb-3">
                                 <label htmlFor="yearOfStudy" className="form-label"><strong>Year of Program</strong></label>
                                 <input required type="number" className="form-control" name="yearOfStudy" placeholder="3" value={formState.yearOfStudy} onChange={(e) => {handleChange(e, "yearOfStudy")}}/>
+                            </div>
+                            <div className="mb-3">
+                                <label htmlFor="discord" className="form-label"><strong>Discord Tag <small>(optional)</small></strong></label>
+                                <input type="text" className="form-control" name="yearOfStudy" placeholder="Someone#1234" value={formState.discord} onChange={(e) => {handleChange(e, "discord")}}/>
                             </div>
                             <div className="mb-3">
                                 <input required type="checkbox" className="form-check-input" name="nameConsent" value={formState.nameConsent} onChange={(e) => {handleChange(e, "nameConsent")}}/>
