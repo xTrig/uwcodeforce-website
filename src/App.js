@@ -6,6 +6,7 @@ import Contact from './components/Contact/Contact';
 import Challenges from './components/Challenges/Challenges';
 import TestPage from './components/TestPage/TestPage';
 import Profile from './components/Profile/Profile';
+import Signup from './components/Signup/Signup';
 import Footer from './components/Footer/Footer.component';
 import {useState} from 'react';
 import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
@@ -20,6 +21,7 @@ const App = () => {
       <Router>
         <Head signedIn={signedIn} setSignedIn={setSignedIn}/>
         <Switch>
+          <Route path="/signup"><Signup /></Route>
           <Route path="/profile"><Profile /></Route>
           <Route path="/testpage"><TestPage /></Route>
           <Route path="/challenges"><Challenges signedIn={signedIn}/></Route>
