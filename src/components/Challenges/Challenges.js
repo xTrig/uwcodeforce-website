@@ -15,6 +15,12 @@ const Challenges = ({signedIn}) => {
             desc: "It’s the holiday season, and everyone is ordering their gifts online this year! Canada Post’s parcel tracking service can’t keep up with the demand! They’re asking you to help them design and develop a new system to help the parcels be delivered on time!",
             url: "challenges/Challenge1.pdf"
         },
+        {
+            releaseTime: new Date("2/26,2021"),
+            title: "U-Chat",
+            desc: "Inter-student and student-instruction communication is vital to succeed in a university environment, yet there aren’t many good chat platforms for universities to use! The main methods of communication in the university right now are email, zoom chat, and private telegram/discord groups. All of which have their own strengths and weaknesses, but nothing beats the option to just send a message to your fellow students or instructor without having to open your email client, copy and paste those weird university email addresses and type up a formal message.",
+            url: "challenges/Challenge2.pdf"
+        }
         // {
         //     releaseTime: new Date("12/30/2020"),
         //     title: "Challenge 2",
