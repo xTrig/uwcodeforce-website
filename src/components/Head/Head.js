@@ -28,13 +28,11 @@ const Head = ({signedIn, setSignedIn}) => {
             <Link className="nav-link dark-hover text-light" to="/"> Home</Link>
             <Link className="nav-link dark-hover text-light" to="/challenges">Challenges</Link>
             <Link className="nav-link dark-hover text-light" to="/contact"> Contact </Link>
-            <a
-              className="nav-link dark-hover disabled"
-              href="https://forms.gle/aL1wt4wSevjWyE969"
-              target="_blank"
-              rel="noreferrer"
-            >Sign Up
-            </a>
+            {signedIn ? 
+            <Link className="nav-link dark-hover text-light" to="/signup">Sign Up</Link>
+            : <Link className="nav-link dark-hover disabled" to="/signup">Sign Up</Link>
+            }
+            
           </div>
           
         </div>
