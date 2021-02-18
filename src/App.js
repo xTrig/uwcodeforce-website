@@ -7,6 +7,7 @@ import Challenges from './components/Challenges/Challenges';
 import TestPage from './components/TestPage/TestPage';
 import Profile from './components/Profile/Profile';
 import Signup from './components/Signup/Signup';
+import Privacy from './components/Privacy/Privacy';
 import Footer from './components/Footer/Footer.component';
 import {useState} from 'react';
 import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
@@ -21,6 +22,7 @@ const App = () => {
       <Router>
         <Head signedIn={signedIn} setSignedIn={setSignedIn}/>
         <Switch>
+          <Route path="/privacypolicy"><Privacy/></Route>
           <Route path="/signup"><Signup /></Route>
           <Route path="/profile"><Profile /></Route>
           <Route path="/testpage"><TestPage /></Route>
