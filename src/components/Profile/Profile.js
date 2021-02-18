@@ -84,6 +84,7 @@ const Profile = () => {
         }catch(t){
             setAlertObject({showAlert: true, alertMsg: "Something weird happened. " + t.message, alertType: "danger"});
         }
+        window.scrollTo(0,0);
     }
     return(
         <div className="container-fluid fullscreen intro">

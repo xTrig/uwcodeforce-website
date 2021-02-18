@@ -52,6 +52,7 @@ const Contact = () => {
         }catch(t){
             setAlertObject({showAlert: true, alertMsg: "Something weird happened. Message failed to send." + t.message, alertType: "danger"});
         }
+        window.scrollTo(0,0);
     }
 
     return (
