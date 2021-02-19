@@ -15,6 +15,7 @@ const Profile = () => {
         lastName: "",
         email: "",
         yearOfStudy: "",
+        nameConsent: true,
         json: true  
       })
 
@@ -118,7 +119,7 @@ const Profile = () => {
                                 <input type="text" className="form-control" name="yearOfStudy" placeholder="Someone#1234" value={formState.discord} onChange={(e) => {handleChange(e, "discord")}}/>
                             </div>
                             <div className="mb-3">
-                                <input required type="checkbox" className="form-check-input" name="nameConsent" value={formState.nameConsent} onChange={(e) => {handleChange(e, "nameConsent")}}/>
+                                <input type="checkbox" className="form-check-input" name="nameConsent" checked={formState.nameConsent} onChange={(e) => {handleChange(e, "nameConsent")}}/>
                                 <label htmlFor="nameConsent" className="form-label"><strong>I consent for the UW Code Force to share my name on this website and social media</strong></label>
                             </div>
 
