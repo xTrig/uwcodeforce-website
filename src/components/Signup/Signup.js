@@ -36,12 +36,13 @@ const Signup = () => {
             if(data.status === "success") {
                 setProfile(data.profile);
             } else {
-                setAlertObject({
-                    showAlert: true,
-                    alertMsg: "Failed to load profile",
-                    alertType: "danger"
-                });
+                // setAlertObject({
+                //     showAlert: true,
+                //     alertMsg: "Failed to load profile",
+                //     alertType: "danger"
+                // });
                 setProfile(null);
+                window.location.href = "https://uwcodeforce.ca/api/auth";
             }
         }));
     }
@@ -129,7 +130,7 @@ const Signup = () => {
                                 <button
                                     className={"btn btn-dark m-auto d-block"}
                                     type="submit"
-                                >Submit</button>
+                                >Sign up</button>
                             </div>
                         </form>
                 </div> : "Profile failed to load..."}

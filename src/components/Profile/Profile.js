@@ -31,11 +31,6 @@ const Profile = () => {
             credentials: 'include'
         }).then((res) => res.json().then((data) => {
             if(data.status === "success") {
-                setAlertObject({
-                    showAlert: true,
-                    alertMsg: "Profile fetched successfully",
-                    alertType: "success"
-                });
                 setProfile(data.profile);
                 setFormState({...formState,
                     firstName: data.profile.firstName,
@@ -48,7 +43,7 @@ const Profile = () => {
             } else {
                 setAlertObject({
                     showAlert: true,
-                    alertMsg: "Failed to load profile",
+                    alertMsg: "Failed to load profile. Your session may have expired, please login and try again.",
                     alertType: "danger"
                 });
                 setProfile(null);
@@ -79,6 +74,9 @@ const Profile = () => {
             ).json()
         if(res.status === "success"){
             setAlertObject({showAlert: true, alertMsg: "Your profile has been updated!", alertType: "success"});
+            setTimeout(() => {
+                window.location.href = "https://uwcodeforce.ca";
+            }, 1500);
         }else{
             setAlertObject({showAlert: true, alertMsg: "Profile failed to update. " + res.message, alertType: "danger"});
         }
@@ -127,10 +125,10 @@ const Profile = () => {
                                 <button
                                     className={"btn btn-dark m-auto d-block"}
                                     type="submit"
-                                >Submit</button>
+                                >Update Profile</button>
                             </div>
                         </form>
-                </div> : "Profile failed to load..."}
+                </div> : ""}
                 
             </div>
         </div>
