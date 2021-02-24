@@ -38,7 +38,7 @@ const Profile = () => {
                     email: data.profile.contactEmail || data.profile.googleEmail,
                     yearOfStudy: data.profile.yearOfStudy,
                     discord: data.profile.discord,
-                    nameConsent: data.profile.nameConsent
+                    nameConsent: data.profile.nameConsent || true
                 });
             } else {
                 setAlertObject({
