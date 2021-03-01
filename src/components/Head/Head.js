@@ -28,10 +28,10 @@ const Head = ({signedIn, setSignedIn}) => {
             <Link className="nav-link dark-hover text-light" to="/"> Home</Link>
             <Link className="nav-link dark-hover text-light" to="/challenges">Challenges</Link>
             <Link className="nav-link dark-hover text-light" to="/contact"> Contact </Link>
-            {signedIn ? 
+            {/* {signedIn ? 
             <Link className="nav-link dark-hover text-light" to="/signup">Challenge Sign Up</Link>
             : <Link className="nav-link dark-hover disabled" to="/signup">Challenge Sign Up</Link>
-            }
+            } */}
             
           </div>
           

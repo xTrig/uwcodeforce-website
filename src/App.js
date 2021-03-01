@@ -23,7 +23,7 @@ const App = () => {
         <Head signedIn={signedIn} setSignedIn={setSignedIn}/>
         <Switch>
           <Route path="/privacypolicy"><Privacy/></Route>
-          <Route path="/signup"><Signup /></Route>
+          {/* <Route path="/signup"><Signup /></Route> */}
           <Route path="/profile"><Profile /></Route>
           <Route path="/testpage"><TestPage /></Route>
           <Route path="/challenges"><Challenges signedIn={signedIn}/></Route>
