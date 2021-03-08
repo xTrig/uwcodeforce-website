@@ -18,7 +18,7 @@ const Challenges = ({signedIn}) => {
         {
             releaseTime: new Date("3/5/2021"),
             title: "U-Chat",
-            desc: "Inter-student and student-instruction communication is vital to succeed in a university environment, yet there aren’t many good chat platforms for universities to use! The main methods of communication in the university right now are email, zoom chat, and private telegram/discord groups. All of which have their own strengths and weaknesses, but nothing beats the option to just send a message to your fellow students or instructor without having to open your email client, copy and paste those weird university email addresses and type up a formal message.",
+            desc: "Inter-student and student-instructor communication is vital to succeed in a university environment, yet there aren’t many good chat platforms for universities to use! The main methods of communication in the university right now are email, zoom chat, and private telegram/discord groups. All of which have their own strengths and weaknesses, but nothing beats the option to just send a message to your fellow students or instructor without having to open your email client, copy and paste those weird university email addresses and type up a formal message.",
             url: "challenges/Challenge2.pdf"
         }
         // {
