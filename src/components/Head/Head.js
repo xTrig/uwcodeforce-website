@@ -34,6 +34,7 @@ const Head = ({signedIn, setSignedIn}) => {
               </a>
               <div className="dropdown-menu" aria-labelledby="resources">
                 <a className="dropdown-item" href="content/gitcrashcourse.pdf">Git Crash Course</a>
+                <a className="dropdown-item" href="https://www.youtube.com/watch?v=YnfmtpLNR9g" target="_blank">Git Crash Course Video</a>
               </div>
             </div>
             {/* {signedIn ? 
