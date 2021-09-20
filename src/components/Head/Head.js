@@ -33,7 +33,7 @@ const Head = ({signedIn, setSignedIn}) => {
                 Resources
               </a>
               <div className="dropdown-menu" aria-labelledby="resources">
-                <a className="dropdown-menu" href="content/CodeForce2021.pdf">Code Force 2021/2022 PDF</a>
+                <a className="dropdown-item" href="content/CodeForce2021.pdf">Code Force 2021/2022 PDF</a>
                 <a className="dropdown-item" href="content/gitcrashcourse.pdf">Git Crash Course</a>
                 <a className="dropdown-item" href="https://www.youtube.com/watch?v=YnfmtpLNR9g" target="_blank">Git Crash Course Video</a>
               </div>
