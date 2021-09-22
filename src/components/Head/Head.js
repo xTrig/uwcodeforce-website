@@ -26,7 +26,7 @@ const Head = ({signedIn, setSignedIn}) => {
         >
           <div className="navbar-nav mr-auto p-2">
             <Link className="nav-link dark-hover text-light" to="/"> Home</Link>
-            <Link className="nav-link dark-hover text-light" to="/challenges">Challenges</Link>
+            {/*<Link className="nav-link dark-hover text-light" to="/challenges">Challenges</Link>*/}
             <Link className="nav-link dark-hover text-light" to="/contact"> Contact </Link>
             <div className="nav-link dropdown text-light p-0">
               <a className="nav-link dropdown-toggle" href="#" id="resources" role="button" data-bs-toggle="dropdown" aria-expanded="false">

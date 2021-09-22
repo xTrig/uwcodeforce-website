@@ -78,24 +78,16 @@ const Contact = () => {
                         </div>
                         <div className="mb-3">
                             <label htmlFor="email" className="form-label"><strong>Email Address</strong></label>
-                            <input required type="email" className="form-control" name="email" placeholder="The one that you used to sign up." value={formState.email} onChange={(e) => {handleChange(e, "email")}}/>
+                            <input required type="email" className="form-control" name="email" placeholder="How can we get back to you?" value={formState.email} onChange={(e) => {handleChange(e, "email")}}/>
                         </div>
                         <div className="mb-3">
-                            <label htmlFor="team" className="form-label"><strong>Team</strong></label> 
-                            {/* {TEAMS.map((elem, idx) => (
-                                <div class="form-check">
-                                    <input required class="form-check-input" type="radio" name="team" id={`form-team-${idx}`} value={elem}/>
-                                    <label class="form-check-label" for={`form-team-${idx}`}>
-                                        Team {elem}
-                                    </label>
-                                </div>
-                            ))} */}
+                            {/*<label htmlFor="team" className="form-label"><strong>Team</strong></label> 
 
-                            <input type="number" name="team" className="form-control" placeholder="If you are currently part of a team, enter the team number" value={formState.team} onChange={(e) => {handleChange(e, "team")}}></input>
+                            <input type="number" name="team" className="form-control" placeholder="If you are currently part of a team, enter the team number" value={formState.team} onChange={(e) => {handleChange(e, "team")}}></input>*/}
                         </div>
                         <div className="mb-3">
                             <label htmlFor="message" className="form-label" ><strong>Message</strong></label>
-                            <textarea required className="form-control" name="message" placeholder="Stuck somewhere? Got questions? How can we help? Describe here ..." rows="5" value={formState.message} onChange={(e) => {handleChange(e, "message")}}/>
+                            <textarea required className="form-control" name="message" placeholder="Write your message here!" rows="5" value={formState.message} onChange={(e) => {handleChange(e, "message")}}/>
                         </div>
                         <div className="mb-3">
                             <button
