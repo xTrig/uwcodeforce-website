@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
-import { Logo } from './../Miscellaneous/Miscellaneous.component';
+import { Logo, GitLogo } from './../Miscellaneous/Miscellaneous.component';
 
 
 const Head = ({signedIn, setSignedIn}) => {
@@ -38,6 +38,7 @@ const Head = ({signedIn, setSignedIn}) => {
                 <a className="dropdown-item" href="https://www.youtube.com/watch?v=YnfmtpLNR9g" target="_blank">Git Crash Course Video</a>
               </div>
             </div>
+            <GitLogo />
             {/* {signedIn ? 
             <Link className="nav-link dark-hover text-light" to="/signup">Challenge Sign Up</Link>
             : <Link className="nav-link dark-hover disabled" to="/signup">Challenge Sign Up</Link>
@@ -46,7 +47,7 @@ const Head = ({signedIn, setSignedIn}) => {
           </div>
           
         </div>
-        <div className="nav ml-auto">
+        <div className="nav navbar-nav ml-auto">
             {!signedIn ? 
             <a className="nav-link dark-hover text-light" href="https://uwcodeforce.ca/api/auth" rel="noreferrer">Login/Register</a>
             : <a className="nav-link dark-hover text-light" href="https://uwcodeforce.ca/api/auth/logout" rel="noreferrer">Logout</a>}

@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components'
 import myBigLogo from './../../media/codeforceregular.png';
 import mySmallLogo from './../../media/codeforcelogo.png';
+import gitLogo from './../../media/github-light.png';
 import { Link } from 'react-router-dom';
 
 
@@ -55,6 +56,14 @@ const Logo = () => {
     )
 }
 
+const GitLogo = () => {
+    return (
+        <a href="https://github.com/Meharban-Singh/student-net" target="_blank">
+            <img color="white" width="42px" height="42px" className="nav-link dark-hover text-light mh-auto"  src={gitLogo}></img>
+        </a>
+    )
+}
+
 const CodeForceTitleSection = ()=>{
     return (
         <div className="row text-dark">
@@ -78,5 +87,6 @@ export {
     TitleWrapper,
     NewsItem,
     CodeForceTitleSection,
-    Logo
+    Logo,
+    GitLogo
 };
