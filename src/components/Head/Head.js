@@ -29,7 +29,7 @@ const Head = ({signedIn, setSignedIn}) => {
             {/*<Link className="nav-link dark-hover text-light" to="/challenges">Challenges</Link>*/}
             <Link className="nav-link dark-hover text-light" to="/contact"> Contact </Link>
             <div className="nav-link dropdown text-light p-0">
-              <a className="nav-link dropdown-toggle" href="#" id="resources" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a className="nav-link dropdown-toggle text-light dark-hover" href="#" id="resources" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Resources
               </a>
               <div className="dropdown-menu" aria-labelledby="resources">
