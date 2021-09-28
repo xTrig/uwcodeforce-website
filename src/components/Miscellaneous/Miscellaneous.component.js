@@ -58,7 +58,7 @@ const Logo = () => {
 
 const GitLogo = () => {
     return (
-        <a href="https://github.com/Meharban-Singh/student-net" target="_blank">
+        <a href="https://github.com/UWCodeForce/student-net" target="_blank">
             <img color="white" width="42px" height="42px" className="nav-link dark-hover text-light mh-auto"  src={gitLogo}></img>
         </a>
     )
